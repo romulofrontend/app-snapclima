@@ -137,3 +137,9 @@ header{
   font-size: 18px
   -webkit-font-smoothing: antialiased;
 }
+
+.sunset-sunrise{
+  display: flex;
+  justify-content: space-around;
+  text-align: center; 
+}
