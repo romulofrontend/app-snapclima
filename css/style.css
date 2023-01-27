@@ -109,18 +109,22 @@ body{
 }
 
 
+/* BOTTOM-CONTAINER*/
+
 .bottom-container{
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   padding: 25px;
-  border-radius: 40px 40px 0 0;
+  border-radius: 25px 25px 0 0;
   background: #fff;
   color: #000;
   font-family:'Ubuntu', sans-serif;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rbga(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+
 
 .temperature-details{
   display: flex;
@@ -155,4 +159,8 @@ body{
   display: flex;
   justify-content: space-around;
   text-align: center; 
+}
+
+.sunset-sunrise__icon{
+  margin-bottom: 5px;
 }
