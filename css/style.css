@@ -9,3 +9,90 @@
   list-style: none;
   border: 0;
 }
+
+body{
+  background: #f3f4fb;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+header{
+  width: 100vw;
+  padding: 25px;
+  margin-bottom: 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+.header__city-search-bar{
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-bottom: 10px;;  
+}
+
+.header__input{
+  background: white;
+  color: black;
+  min-width: 300px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.header__button{
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  position: relative; 
+  left: -15px;
+}
+
+.header__curren-date{
+  font-weight: 500;
+  font-size: 12px;
+  color: #acabab;
+  margin-bottom: 5px;
+}
+
+.header__city-name{
+  -webkit-font-smoothing: antialiased;
+  font-family:'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+.current-temperature{
+  text-align: center;
+}
+
+.current-temperature__weather-icon{
+  margin-bottom: 15px;
+  width: 25%;
+}
+
+.current-temperature__description{
+  font-size:20px;
+  font-weight: 500;
+  color: #acabab;
+  margin-bottom: 10px;
+}
+
+.current-temperature__info-label{
+  font-size: 12px;
+  font-weight: 500;
+  color: #acabab;
+  margin-bottom: 5px;
+}
+
+.current-temperature__current-temperature{
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  font-family:'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
