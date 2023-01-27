@@ -19,9 +19,11 @@ body{
 /* HEADER */
 
 .header{    
-  margin-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto 30px;
   padding: 0 30px;
   font-family: 'Inter', sans-serif;
+ 
 }
 
 .header__city-search-bar{  
