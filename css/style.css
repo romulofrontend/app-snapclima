@@ -115,7 +115,7 @@ body{
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 25px;
+  padding: 30px 0;
   border-radius: 25px 25px 0 0;
   background: #fff;
   color: #000;
@@ -126,33 +126,37 @@ body{
 }
 
 
+
+/* TEMPERATURE-DETAILS */
+
 .temperature-details{
   display: flex;
   justify-content: space-around;
-  margin-bottom: 35px; 
-  text-align: center; 
+  margin-bottom: 35px;
 }
 
 .temperature-details__item{
-  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   color: #acabab;
+  border-right: 1px solid #a2a2be;
 }
 
-.temperature-details__item:nth-child(2) {
-  border-left: 1px solid #acabab;
-  border-right: 1px solid #acabab;
+.temperature-details__item:last-child{
+  border: nome;
 }
 
 .temperature-details__label{
-  margin-bottom: 5px;
-  color: #acabab;
+  margin-bottom: 7px;
+  color: #a2a2be;
   font-size: 12px;
 }
 
 .temperature-details__value{
-  color: #000;
-  font-size: 18px
-  -webkit-font-smoothing: antialiased;
+  font-size: 20px;
+  font-weight: 500;  
 }
 
 .sunset-sunrise{
@@ -163,4 +167,8 @@ body{
 
 .sunset-sunrise__icon{
   margin-bottom: 5px;
+}
+
+.sunset-sunrise__value{
+  font-size: 20px;
 }
