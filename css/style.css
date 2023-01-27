@@ -16,14 +16,20 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
+.header,
+.temperature-details,
+.sunset-sunrise{
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
 /* HEADER */
 
-.header{    
-  max-width: 600px;
-  margin: 0 auto 30px;
+.header{      
+  margin-bottom:30px;
   padding: 0 30px;
-  font-family: 'Inter', sans-serif;
- 
+  font-family: 'Inter', sans-serif; 
 }
 
 .header__city-search-bar{  
@@ -147,7 +153,7 @@ body{
 }
 
 .temperature-details__item:last-child{
-  border: nome;
+  border: none;
 }
 
 .temperature-details__label{
