@@ -78,20 +78,18 @@ header{
   font-size:20px;
   font-weight: 500;
   color: #acabab;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .current-temperature__info-label{
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 13px;
+  /*font-weight: 500;*/
   color: #acabab;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .current-temperature__current-temperature{
-  color: #000;
-  -webkit-font-smoothing: antialiased;
-  font-family:'Ubuntu', sans-serif;
+  color: #000;  
   font-weight: 500;
   font-size: 20px;
 }
