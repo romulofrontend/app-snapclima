@@ -109,4 +109,31 @@ header{
   width: 100vw;;
 }
 
+.temperature-details{
+  display: flex;
+  justify-content: space-around;
+  text-align: center; 
+  margin-bottom: 35px; 
+}
 
+.temperature-details__item{
+  color: #acabab;
+  padding: 0 25px;
+}
+
+.temperature-details__item:nth-child(2) {
+  border-left: 1px solid #acabab;
+  border-right: 1px solid #acabab;
+}
+
+.temperature-details__label{
+  color: #acabab;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.temperature-details__value{
+  color: #000;
+  font-size: 18px
+  -webkit-font-smoothing: antialiased;
+}
