@@ -79,7 +79,7 @@ body{
 }
 
 .header__city-name{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -105,14 +105,15 @@ body{
 }
 
 .current-temperature__info-label{
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
+  font-size: 14px;  
   color: #a2a2be;
 }
 
 .current-temperature__current-temperature{
   color: #000;  
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 
@@ -162,7 +163,7 @@ body{
 }
 
 .temperature-details__value{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;  
 }
 
@@ -184,5 +185,5 @@ body{
 }
 
 .sunset-sunrise__value{
-  font-size: 20px;
+  font-size: 16px;
 }
