@@ -94,14 +94,20 @@ function displayWeather(data){
     case "algumas nuvens":
       bgColor = '#85c5fb';
     break;
+    case "nuvens dispersas":
+      bgColor = '#cbcfe9;';
+    break;
     case "chuva leve":
-      bgColor = '#bae5f9';
+      bgColor = '#d5d6dd';
+    break;
+    case "chuva forte":
+      bgColor = '#c9bdbd';
     break;
     case "céu limpo":
       bgColor = '#97e2ff';
     break;
     default:
-      bgColor = '#5b6ef1'; 
+      bgColor = '#ffffff'; 
   }
 
    document.body.style.background = bgColor
