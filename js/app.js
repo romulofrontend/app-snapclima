@@ -28,10 +28,31 @@ citySearchButton.addEventListener('click', () => {
 })
 
 
+//Pegar a localização do user pelo navegador
+navigator.geolocation.getCurrentPosition(
+  (position) => {
+    let lat = position.coords.latitude
+    let lon = position.coords.longitude
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${api_key}`)
+  .then((response) => response.json())
+  .then((data) => displayWeather(data))
+},
+//Caso não consiga exibe uma mensagem de erro
+(err) => {
+  if(err.code === 1){
+    alert("Geolocalização negada pelo usuário. Busque manualmente por uma cidade ataravés da barra de pesquisa")
+  }
+}
+)
+
+
 //Fazendo a requisição a api
 //Pegar a resposta e converter em json
 //Mandar esses dados para uma outra função
-function getCityWeather(cityName){    
+function getCityWeather(cityName){
+  
+  weatherIcon.src = `./assets/loading-icon.svg`
+
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=pt_br&appid=${api_key}`)
   .then((response) => response.json())
   .then((data) => displayWeather(data))
@@ -61,7 +82,7 @@ function displayWeather(data){
   feelsLikeTemperature.textContent = `${Math.round(feels_like)}ºC`
   currentHumidity.textContent = `${humidity}%`
   sunsetTime.textContent = formatTime(sunset)
-  sunriseTime.textContent = formatTime(sunrise)
+  sunriseTime.textContent = formatTime(sunrise)  
 }
 
 //Humanizando o formato de data
@@ -78,10 +99,3 @@ function formatTime(epochTime){
   let minutes = date.getMinutes()
   return `${hours}:${minutes}`
 }
-
-
-
-
-
-
-
