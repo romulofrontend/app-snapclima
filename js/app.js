@@ -14,6 +14,7 @@ const feelsLikeTemperature = document.getElementById('feels-like-temperature')
 const currentHumidity = document.getElementById('current-humidity')
 const sunsetTime = document.getElementById('sunset-time')
 const sunriseTime = document.getElementById('sunrise-time')
+let bgColor = "";
 
 const api_key = 'b0926c4638b1d89a1e02fac5b435ab10';
 
@@ -82,7 +83,28 @@ function displayWeather(data){
   feelsLikeTemperature.textContent = `${Math.round(feels_like)}ºC`
   currentHumidity.textContent = `${humidity}%`
   sunsetTime.textContent = formatTime(sunset)
-  sunriseTime.textContent = formatTime(sunrise)  
+  sunriseTime.textContent = formatTime(sunrise) 
+  
+  
+  //Trocar a cor do fundo de acordo com a descrição do tempo
+  switch(description){
+    case "nublado":
+      bgColor = '#d5d6dd';
+    break;
+    case "algumas nuvens":
+      bgColor = '#85c5fb';
+    break;
+    case "chuva leve":
+      bgColor = '#bae5f9';
+    break;
+    case "céu limpo":
+      bgColor = '#97e2ff';
+    break;
+    default:
+      bgColor = '#5b6ef1'; 
+  }
+
+   document.body.style.background = bgColor
 }
 
 //Humanizando o formato de data
