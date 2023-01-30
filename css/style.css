@@ -101,13 +101,18 @@ body{
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 500;
-  color: #b6aef0;
+  color: #000;
+}
+
+.current-temperature__description::first-letter{
+  text-transform: uppercase;
 }
 
 .current-temperature__info-label{
   margin-bottom: 10px;
   font-size: 14px;  
   color: #a2a2be;
+  text-transform: capitalize;
 }
 
 .current-temperature__current-temperature{
@@ -164,7 +169,8 @@ body{
 
 .temperature-details__value{
   font-size: 16px;
-  font-weight: 500;  
+  font-weight: 500;
+  color: #000;  
 }
 
 /* SUNSET-SUNRISE*/
