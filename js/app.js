@@ -51,17 +51,34 @@ function displayWeather(data){
   } = data  
 
   //Atribuir esses dados as variaves com os elementos no dom
-  currentDate.textContent = dt
+  //Ajustes na formatação de exibição dos dados
+  currentDate.textContent = formatDate(dt)
   cityName.textContent = name
   weatherIcon.src = `./assets/${icon}.svg`
   weatherDescription.textContent = description
-  currentTemperature.textContent = temp
-  windSpeed.textContent = speed
-  feelsLikeTemperature.textContent = feels_like
-  currentHumidity.textContent = humidity
-  sunsetTime.textContent = sunset
-  sunriseTime.textContent = sunrise
+  currentTemperature.textContent = `${Math.round(temp)}ºC`
+  windSpeed.textContent = `${Math.round(speed * 3.6)}km/h`
+  feelsLikeTemperature.textContent = `${Math.round(feels_like)}ºC`
+  currentHumidity.textContent = `${humidity}%`
+  sunsetTime.textContent = formatTime(sunset)
+  sunriseTime.textContent = formatTime(sunrise)
 }
+
+//Humanizando o formato de data
+function formatDate(epochTime){
+  let date = new Date(epochTime * 1000)
+  let formattedDate = date.toLocaleDateString('pt-BT', {month:"long", day:"numeric"})
+  return `Hoje, ${formattedDate}`
+}
+
+//Humanizando o formato de tempo
+function formatTime(epochTime){
+  let date = new Date(epochTime * 1000)
+  let hours = date.getHours()
+  let minutes = date.getMinutes()
+  return `${hours}:${minutes}`
+}
+
 
 
 
