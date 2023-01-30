@@ -75,7 +75,7 @@ body{
 .header__current-date{
   margin-bottom: 5px;
   font-size: 14px;
-  color: #a2a2be;
+  color: #000;
 }
 
 .header__city-name{
@@ -102,6 +102,7 @@ body{
   font-size: 24px;
   font-weight: 500;
   color: #000;
+  text-transform: Capitalize;;
 }
 
 .current-temperature__description::first-letter{
@@ -111,8 +112,10 @@ body{
 .current-temperature__info-label{
   margin-bottom: 10px;
   font-size: 14px;  
-  color: #a2a2be;
   text-transform: capitalize;
+  background: #000;
+  padding: 10px 15px;
+  color: #fff;
 }
 
 .current-temperature__current-temperature{
