@@ -49,6 +49,18 @@ function displayWeather(data){
     weather : [{icon, description}],
     wind : {speed}
   } = data  
+
+  //Atribuir esses dados as variaves com os elementos no dom
+  currentDate.textContent = dt
+  cityName.textContent = name
+  weatherIcon.src = `./assets/${icon}.svg`
+  weatherDescription.textContent = description
+  currentTemperature.textContent = temp
+  windSpeed.textContent = speed
+  feelsLikeTemperature.textContent = feels_like
+  currentHumidity.textContent = humidity
+  sunsetTime.textContent = sunset
+  sunriseTime.textContent = sunrise
 }
 
 
