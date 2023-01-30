@@ -38,6 +38,18 @@ function getCityWeather(cityName){
 }
 
 
+//Criar função desestruturar o objeto json
+//Ficar só com os dados que forem usados
+function displayWeather(data){
+  let {
+    dt,
+    main : {temp, feels_like, humidity},
+    name,
+    sys : {sunrise, sunset},
+    weather : [{icon, description}],
+    wind : {speed}
+  } = data  
+}
 
 
 
