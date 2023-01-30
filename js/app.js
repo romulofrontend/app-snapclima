@@ -15,9 +15,32 @@ const currentHumidity = document.getElementById('current-humidity')
 const sunsetTime = document.getElementById('sunset-time')
 const sunriseTime = document.getElementById('sunrise-time')
 
+const api_key = 'b0926c4638b1d89a1e02fac5b435ab10';
+
 //Interação nos botões
 citySearchButton.addEventListener('click', () => {
+
+  //Armazenar numa let o nome da cidade digitado pelo user
   let cityName = citySearchInput.value
+
+  //Usar essa let pra criar uma função pra usar na requisição
+  getCityWeather(cityName)
 })
+
+
+//Fazendo a requisição a api
+//Pegar a resposta e converter em json
+//Mandar esses dados para uma outra função
+function getCityWeather(cityName){    
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=pt_br&appid=${api_key}`)
+  .then((response) => response.json())
+  .then((data) => displayWeather(data))
+}
+
+
+
+
+
+
 
 
